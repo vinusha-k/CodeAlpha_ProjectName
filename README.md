@@ -1,3 +1,4 @@
+TASK 1
 Description:
 This program is a classic Hangman game implemented in Python. The game randomly selects one word from a predefined list of five fruits. The player must guess the word by suggesting letters within a limited number of attempts (6 tries).
 
@@ -16,3 +17,18 @@ Console-based, simple input/output — no graphics or audio.
 Demonstrates Python basics: random, while loops, if-else, strings, and lists.
 
         
+TASK 2
+Description:
+This chatbot is a Python program that replies to user input using predefined responses. It demonstrates basic programming concepts such as conditional statements, loops, and string handling. The chatbot continues to chat until the user types "bye".
+
+Key Features:
+
+Greets the user and responds to basic phrases like "hello" and "how are you".
+
+Simple if-else logic for understanding inputs.
+
+Runs in the console; no external libraries required.
+
+Ends conversation when the user types "bye".
+
+Easy to modify and expand with more responses.
