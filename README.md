@@ -1,5 +1,3 @@
-# CodeAlpha_ProjectName
-
 import random
 
 words = ["apple", "banana", "grape", "mango", "peach"]
