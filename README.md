@@ -1,33 +1,18 @@
-import random
+Description:
+This program is a classic Hangman game implemented in Python. The game randomly selects one word from a predefined list of five fruits. The player must guess the word by suggesting letters within a limited number of attempts (6 tries).
 
-words = ["apple", "banana", "grape", "mango", "peach"]
-word = random.choice(words)
-guessed = "_" * len(word)
-attempts = 6
+Each correct guess reveals the position of the letter in the word, while incorrect guesses reduce the number of remaining attempts. The game continues until the player either successfully guesses all letters or runs out of attempts.
 
-print("Welcome to Hangman!")
+Key Features:
 
-while attempts > 0 and "_" in guessed:
-    print("\nWord:", " ".join(guessed))
-    print("Attempts left:", attempts)
-    guess = input("Guess a letter: ")
+Uses a list of 5 predefined words (e.g., "apple", "banana", "grape", "mango", "peach").
 
-    if guess in word:
-        new = ""
-        for i in range(len(word)):
-            if word[i] == guess:
-                new += guess
-            else:
-                new += guessed[i]
-        guessed = new
-        print("Correct!")
-    else:
-        attempts -= 1
-        print("Wrong!")
+Allows 6 incorrect guesses before the game ends.
 
-if "_" not in guessed:
-    print("\nYou won! The word was:", word)
-else:
-    print("\nYou lost! The word was:", word)
+Provides feedback for each guess (correct, wrong, or already guessed).
+
+Console-based, simple input/output — no graphics or audio.
+
+Demonstrates Python basics: random, while loops, if-else, strings, and lists.
 
         
