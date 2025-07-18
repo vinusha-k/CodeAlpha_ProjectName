@@ -17,7 +17,7 @@ Console-based, simple input/output — no graphics or audio.
 Demonstrates Python basics: random, while loops, if-else, strings, and lists.
 
         
-TASK 2
+TASK 4
 Description:
 This chatbot is a Python program that replies to user input using predefined responses. It demonstrates basic programming concepts such as conditional statements, loops, and string handling. The chatbot continues to chat until the user types "bye".
 
