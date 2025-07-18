@@ -2,36 +2,34 @@
 
 import random
 
-def hangman():
-    words = ["apple", "banana", "grape", "mango", "peach"]
-    word = random.choice(words)
-    guessed = ["_"] * len(word)
-    attempts = 6
-    guessed_letters = []
+words = ["apple", "banana", "grape", "mango", "peach"]
+word = random.choice(words)
+guessed = "_" * len(word)
+attempts = 6
 
-    print("Welcome to Hangman!")
+print("Welcome to Hangman!")
 
-    while attempts > 0 and "_" in guessed:
-        print("\nWord:", " ".join(guessed))
-        print("Attempts left:", attempts)
-        guess = input("Guess a letter: ").lower()
+while attempts > 0 and "_" in guessed:
+    print("\nWord:", " ".join(guessed))
+    print("Attempts left:", attempts)
+    guess = input("Guess a letter: ")
 
-        if guess in guessed_letters:
-            print("You already guessed that letter.")
-        elif guess in word:
-            for i, letter in enumerate(word):
-                if letter == guess:
-                    guessed[i] = guess
-            print("Good guess!")
-        else:
-            attempts -= 1
-            print("Wrong guess!")
-        guessed_letters.append(guess)
-
-    if "_" not in guessed:
-        print("\nCongratulations! You guessed the word:", word)
+    if guess in word:
+        new = ""
+        for i in range(len(word)):
+            if word[i] == guess:
+                new += guess
+            else:
+                new += guessed[i]
+        guessed = new
+        print("Correct!")
     else:
-        print("\nGame over! The word was:", word)
+        attempts -= 1
+        print("Wrong!")
 
-if __name__ == "__main__":
-    hangman()
+if "_" not in guessed:
+    print("\nYou won! The word was:", word)
+else:
+    print("\nYou lost! The word was:", word)
+
+        
